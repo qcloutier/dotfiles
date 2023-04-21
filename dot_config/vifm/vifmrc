@@ -1,0 +1,74 @@
+colorscheme Default
+only
+
+set history=100
+set ignorecase
+set incsearch
+set milleroptions=lsize:1,csize:2,rsize:3,rpreview:all
+set millerview
+set nofollowlinks
+set nohlsearch
+set norunexec
+set number relativenumber
+set scrolloff=4
+set showtabline=always
+set smartcase
+set sortnumbers
+set statusline='%1* Vifm %* %T %= %2* %A %u:%g %s %1* %d '
+set suggestoptions=normal,visual,view,otherpane,keys,marks,registers
+set syscalls
+set tablabel='  %t ' tabprefix= tabsuffix=
+set tabscope=pane
+set timefmt=%H:%M│%d/%m/%y
+set trash trashdir=~/.local/share/Trash/files
+set tuioptions=u
+set undolevels=1000
+set vicmd=nvim
+set vifminfo=bmarks,bookmarks,chistory,dhistory,dirstack,fhistory,phistory,registers,shistory,tui
+set vimhelp
+set wildmenu wildstyle=popup
+
+mark h ~
+mark t ~/.local/share/Trash/files
+mark c ~/.local/share/chezmoi
+
+fileviewer {*.7z} 7z l %c
+fileviewer {*.tar.gz,*.tgz} tar -tzf %c
+fileviewer {*.tar.txz,*.txz} tar -tJf %c
+fileviewer {*.tar} tar -tf %c
+fileviewer {*.zip} unzip -l %c
+fileviewer {*.pdf} pdftotext -nopgbrk %c
+fileviewer {*.gif,*.jpeg,*.jpg,*.png} echo # https://github.com/vifm/vifm/issues/731
+fileviewer {*} bat --color=always --number --wrap=never %c
+
+filetype '{
+    \*.aac,*.flac,*.m4a,*.mp3,*.ogg,*.opus,*.wav,*.wma,
+    \*.avi,*.m4v,*.mkv,*.mov,*.mp4,*.mpg,*.mpeg,*.webm,*.wmv,
+    \*.bmp,*.gif,*.ico,*.jpg,*.jpeg,*.png,*.svg,*.webp,
+    \*.cbr,*.cbz,*.djvu,*.epub,*.pdf,*.ps,
+    \*.doc,*.docx,*.odp,*.ods,*.odt,*.ppt,*.pptx,*.xls,*.xlsx
+  \}' nohup xdg-open %f > /dev/null 2>&1
+
+set classify='
+  \  :dir:/, :reg:, :exe:, :link:, :?:,
+  \  ::../::, ::.*/::/, ::.*::,
+  \  ::Archives/::/,
+  \  ::Desktop/::/,
+  \  ::Documents/::/,
+  \  ::Downloads/::/,
+  \  ::Git/::/,
+  \  ::Music/::/,
+  \  ::Pictures/::/,
+  \  ::Videos/::/,
+  \  ::Workspace/::/,
+  \  ::*.7z,,*.apk,,*.bz2,,*.deb,,*.gz,,*.gzip,,*.lzma,,*.rpm,,*.tar,,*.tgz,,*.txz,,*.xz,,*.zip::,
+  \  ::*.cue,,*.img,,*.iso::,
+  \  ::*.bin,,*.so::,
+  \  ::*.aac,,*.flac,,*.m3u,,*.m4a,,*.mp3,,*.ogg,,*.opus,,*.pls,,*.wav,,*.wma::,
+  \  ::*.avi,,*.m4v,,*.mkv,,*.mov,,*.mp4,,*.mpeg,,*.mpg,,*.webm,,*.wmv::,
+  \  ::*.bmp,,*.gif,,*.ico,,*.jpeg,,*.jpg,,*.png,,*.svg::,
+  \  ::*.cbr,,*.cbz,,*.djvu,,*.epub,,*.ps::,
+  \  ::*.pdf::,
+  \  ::*.doc,,*.docx,,*.odt::,
+  \  ::*.ods,,*.xls,,*.xlsx::,
+  \  ::*.odp,,*.ppt,,*.pptx::'
