@@ -16,7 +16,7 @@ highlight Selected cterm=none ctermfg=default ctermbg=Blue3
 highlight StatusLine cterm=none ctermfg=LightBlack ctermbg=DarkBlue
 highlight SuggestBox cterm=none ctermfg=White ctermbg=DarkBlue
 highlight TabLineSel cterm=bold ctermfg=White ctermbg=Blue3
-highlight TopLine cterm=none ctermfg=White ctermbg=DarkBlue
+highlight TopLine cterm=none ctermfg=White ctermbg=default
 highlight TopLineSel cterm=bold ctermfg=White ctermbg=default
 highlight WildMenu cterm=reverse ctermfg=default ctermbg=default
 

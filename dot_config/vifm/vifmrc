@@ -37,9 +37,11 @@ fileviewer {*.tar.gz,*.tgz} tar -tzf %c
 fileviewer {*.tar.txz,*.txz} tar -tJf %c
 fileviewer {*.tar} tar -tf %c
 fileviewer {*.zip} unzip -l %c
-fileviewer {*.pdf} pdftotext -nopgbrk %c
-fileviewer {*.gif,*.jpeg,*.jpg,*.png} echo # https://github.com/vifm/vifm/issues/731
-fileviewer {*} bat --color=always --number --wrap=never %c
+fileviewer {*.pdf} pdftotext -nopgbrk %c -
+fileviewer {*.gif,*.jpeg,*.jpg,*.png}
+  \ kitten icat --place=%pwx%ph@%pxx%py --stdin=no %c >/dev/tty %N
+  \ %pc kitten icat --clear >/dev/tty %N
+fileviewer {*} bat --color=always --number %c
 
 filetype '{
     \*.aac,*.flac,*.m4a,*.mp3,*.ogg,*.opus,*.wav,*.wma,
