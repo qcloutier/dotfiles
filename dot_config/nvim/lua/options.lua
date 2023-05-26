@@ -5,7 +5,6 @@ g.loaded_python3_provider = 0
 g.loaded_ruby_provider = 0
 
 local opt = vim.opt
-opt.cmdheight = 0
 opt.expandtab = true
 opt.ignorecase = true
 opt.laststatus = 3

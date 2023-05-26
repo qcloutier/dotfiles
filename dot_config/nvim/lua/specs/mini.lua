@@ -19,8 +19,8 @@ return {
             base01 = "#303030", base09 = "#E66100",
             base02 = "#4F4F4F", base0A = "#FFA348",
             base03 = "#77767B", base0B = "#5BC8AF",
-            base04 = "#B0AFAC", base0C = "#62A0EA",
-            base05 = "#C0BFBC", base0D = "#7D8AC7",
+            base04 = "#B0AFAC", base0C = "#99C1F1",
+            base05 = "#C0BFBC", base0D = "#62A0EA",
             base06 = "#DEDDDA", base0E = "#DC8ADD",
             base07 = "#FCFCFC", base0F = "#CDAB8F",
           },
@@ -58,7 +58,6 @@ return {
 
       vim.api.nvim_set_hl(0, "Comment", { fg = opts.base16.palette.base03, italic = true })
       vim.api.nvim_set_hl(0, "EndOfBuffer", { fg = opts.base16.palette.base00 })
-      vim.api.nvim_set_hl(0, "MiniTablineFill", { bg = opts.base16.palette.base01 })
     end,
     keys = {
       { "ZX", "<Cmd>lua MiniBufremove.delete()<CR>", desc = "Delete buffer" },
