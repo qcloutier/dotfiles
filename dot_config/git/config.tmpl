@@ -1,0 +1,17 @@
+[init]
+	defaultBranch = master
+
+[pull]
+	rebase = true
+[push]
+	default = current
+
+[remote "origin"]
+	prune = true
+
+[url "ssh://git@github.com/"]
+	insteadOf = https://github.com/
+
+[user]
+	email = {{ .email }}
+	name = {{ .name }}
