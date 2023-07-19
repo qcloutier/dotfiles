@@ -1,0 +1,8 @@
+sourceDir = "{{ .chezmoi.homeDir }}/Git/dotfiles"
+
+[cd]
+command = "fish"
+
+[data]
+email = {{ promptString "email" | quote }}
+name = {{ promptString "name" | quote }}
