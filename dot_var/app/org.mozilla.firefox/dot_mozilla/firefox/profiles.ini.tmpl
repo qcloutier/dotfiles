@@ -1,0 +1,18 @@
+{{- $inst := mozillaInstallHash "/app/lib/firefox" -}}
+{{- $name := "default-release" -}}
+{{- $path := printf "00000000.%s" $name -}}
+
+[Install{{ $inst }}]
+Default={{ $path }}
+Locked=1
+
+[Profile0]
+Name={{ $name }}
+IsRelative=1
+Path={{ $path }}
+Default=1
+
+[General]
+StartWithLastProfile=1
+Version=2
+

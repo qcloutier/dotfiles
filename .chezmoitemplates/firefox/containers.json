@@ -1,0 +1,50 @@
+{
+  "version": 4,
+  "lastUserContextId": 5,
+  "identities": [
+    {
+      "icon": "circle",
+      "color": "blue",
+      "public": true,
+      "userContextId": 1,
+      "name": "Blue"
+    },
+    {
+      "icon": "circle",
+      "color": "green",
+      "public": true,
+      "userContextId": 2,
+      "name": "Green"
+    },
+    {
+      "icon": "circle",
+      "color": "yellow",
+      "public": true,
+      "userContextId": 3,
+      "name": "Yellow"
+    },
+    {
+      "icon": "circle",
+      "color": "red",
+      "public": true,
+      "userContextId": 4,
+      "name": "Red"
+    },
+    {
+      "public": false,
+      "icon": "",
+      "color": "",
+      "name": "userContextIdInternal.thumbnail",
+      "accessKey": "",
+      "userContextId": 5
+    },
+    {
+      "userContextId": 4294967295,
+      "public": false,
+      "icon": "",
+      "color": "",
+      "name": "userContextIdInternal.webextStorageLocal",
+      "accessKey": ""
+    }
+  ]
+}
