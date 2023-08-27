@@ -3,7 +3,7 @@ return {
     "akinsho/toggleterm.nvim",
     opts = {
       open_mapping = "<Leader>tt",
-      shade_terminals = true,
+      shade_terminals = false,
     },
     cmd = "ToggleTerm",
     keys = {

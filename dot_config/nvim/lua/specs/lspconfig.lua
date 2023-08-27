@@ -71,7 +71,7 @@ return {
         desc = "Set buffer-local mappings for the LSP client",
       })
       require("lspkind").init()
-      for type, icon in pairs({ Error = " ", Warn = " ", Info = " ", Hint = "" }) do
+      for type, icon in pairs({ Error = "󰅚 ", Warn = "󰀪 ", Info = "󰋽 ", Hint = "󰌶" }) do
         local hl = "DiagnosticSign" .. type
         vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
       end

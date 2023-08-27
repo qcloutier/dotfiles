@@ -5,7 +5,6 @@ return {
       local wk = require("which-key")
       wk.setup()
       wk.register({
-        c = { name = "colorizer" },
         e = { name = "neotree" },
         f = { name = "telescope" },
         g = { name = "gitsigns" },

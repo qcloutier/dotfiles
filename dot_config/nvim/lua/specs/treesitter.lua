@@ -4,15 +4,12 @@ return {
     opts = {
       -- stylua: ignore
       ensure_installed = {
-        "bash", "c", "css", "dockerfile", "fish", "go",
-        "gomod", "graphql", "hcl", "help", "html", "ini",
-        "java", "javascript", "json", "json5", "lua", "make",
-        "markdown", "proto", "python", "query", "terraform",
-        "toml", "tsx", "typescript", "vim", "yaml",
+        "c", "lua", "query", "vim", "vimdoc",
+        "go", "gomod", "gosum", "gowork",
+        "graphql", "hcl", "json5", "terraform",
       },
       highlight = { enable = true },
       incremental_selection = { enable = true },
-      indent = { enable = true },
     },
     main = "nvim-treesitter.configs",
     build = function()

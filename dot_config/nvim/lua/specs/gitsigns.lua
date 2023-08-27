@@ -19,10 +19,6 @@ return {
         bmap({ "<Leader>gd", gs.diffthis, desc = "Diff this" })
       end,
     },
-    cmd = "Gitsigns",
-    keys = {
-      { "<Leader>ga", "<Cmd>Gitsigns attach<CR>", desc = "Activate gitsigns" },
-      { "<Leader>gd", "<Cmd>Gitsigns detach<CR>", desc = "Deactivate gitsigns" },
-    },
+    event = { "BufReadPre", "BufNewFile" },
   },
 }

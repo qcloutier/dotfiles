@@ -9,6 +9,7 @@ return {
       vim.opt.termguicolors = true
     end,
     opts = function()
+      local MiniHipatterns = require("mini.hipatterns")
       local MiniMap = require("mini.map")
       return {
         base16 = {
@@ -23,6 +24,11 @@ return {
             base05 = "#C0BFBC", base0D = "#62A0EA",
             base06 = "#DEDDDA", base0E = "#DC8ADD",
             base07 = "#FCFCFC", base0F = "#CDAB8F",
+          },
+        },
+        hipatterns = {
+          highlighters = {
+            hex_color = MiniHipatterns.gen_highlighter.hex_color(),
           },
         },
         map = {
@@ -48,6 +54,7 @@ return {
       require("mini.comment").setup()
       require("mini.completion").setup()
       require("mini.cursorword").setup()
+      require("mini.hipatterns").setup(opts.hipatterns)
       require("mini.indentscope").setup()
       require("mini.map").setup(opts.map)
       require("mini.pairs").setup()
