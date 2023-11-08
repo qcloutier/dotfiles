@@ -20,7 +20,7 @@ user_pref("browser.startup.page", 3); // open previous windows and tabs
 user_pref("browser.tabs.closeWindowWithLastTab", false);
 user_pref("browser.tabs.drawInTitlebar", true);
 user_pref("browser.toolbars.bookmarks.visibility", "never");
-user_pref("browser.uiCustomization.state", '{"placements":{"nav-bar":["back-button","forward-button","stop-reload-button","customizableui-special-spring1","urlbar-container","customizableui-special-spring2","downloads-button","unified-extensions-button"],"TabsToolbar":["alltabs-button","tabbrowser-tabs","new-tab-button"]},"currentVersion":10000}');
+user_pref("browser.uiCustomization.state", '{"placements":{"TabsToolbar":["alltabs-button","tabbrowser-tabs","new-tab-button"],"nav-bar":["back-button","forward-button","stop-reload-button","customizableui-special-spring1","urlbar-container","customizableui-special-spring2","downloads-button","unified-extensions-button"],"unified-extensions-area":["ublock0_raymondhill_net-browser-action"]},"currentVersion":10000}');
 user_pref("browser.uidensity", 1); // compact
 user_pref("browser.urlbar.shortcuts.bookmarks", false);
 user_pref("browser.urlbar.shortcuts.history", false);
