@@ -9,7 +9,7 @@ return {
         gopls = {},
         jdtls = {},
         pylsp = {},
-        sumneko_lua = {
+        lua_ls = {
           settings = {
             Lua = {
               runtime = { version = "LuaJIT" },
@@ -21,6 +21,7 @@ return {
             },
           },
         },
+        terraformls = {},
         tsserver = {},
       },
       mappings = {

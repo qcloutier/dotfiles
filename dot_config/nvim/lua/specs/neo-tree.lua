@@ -5,9 +5,6 @@ return {
       "muniftanjim/nui.nvim",
       "nvim-lua/plenary.nvim",
     },
-    init = function()
-      vim.g.neo_tree_remove_legacy_commands = 1
-    end,
     opts = {
       close_if_last_window = true,
       filesystem = {
