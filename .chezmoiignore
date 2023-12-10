@@ -2,6 +2,7 @@
 Library
 {{- end }}
 {{- if ne .chezmoi.os "linux" }}
-dot_local
-dot_var
+.Trash
+.local
+.var
 {{- end }}

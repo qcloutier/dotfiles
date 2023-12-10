@@ -20,7 +20,7 @@ set syscalls
 set tablabel='  %t ' tabprefix= tabsuffix=
 set tabscope=pane
 set timefmt=%H:%M│%d/%m/%y
-set trash trashdir=~/.local/share/Trash/files
+set trash trashdir=~/.Trash
 set tuioptions=u
 set undolevels=1000
 set vicmd=nvim
@@ -29,8 +29,7 @@ set vimhelp
 set wildmenu wildstyle=popup
 
 mark h ~
-mark t ~/.local/share/Trash/files
-mark c ~/.local/share/chezmoi
+mark t ~/.Trash
 
 fileviewer {*.7z} 7z l %c
 fileviewer {*.tar.gz,*.tgz} tar -tzf %c
@@ -49,28 +48,30 @@ filetype '{
     \*.bmp,*.gif,*.ico,*.jpg,*.jpeg,*.png,*.svg,*.webp,
     \*.cbr,*.cbz,*.djvu,*.epub,*.pdf,*.ps,
     \*.doc,*.docx,*.odp,*.ods,*.odt,*.ppt,*.pptx,*.xls,*.xlsx
-  \}' nohup xdg-open %f > /dev/null 2>&1
+  \}' open %f
 
 set classify='
   \  :dir:/, :reg:, :exe:, :link:, :?:,
   \  ::../::, ::.*/::/, ::.*::,
-  \  ::Archives/::/,
+  \  ::Applications/::/,
   \  ::Desktop/::/,
   \  ::Documents/::/,
   \  ::Downloads/::/,
-  \  ::Git/::/,
+  \  ::Google Drive/::/,
+  \  ::Library/::/,
+  \  ::Movies/,,Videos/::/,
   \  ::Music/::/,
   \  ::Pictures/::/,
-  \  ::Videos/::/,
-  \  ::Workspace/::/,
+  \  ::Public/::/,
+  \  ::Templates/::/,
   \  ::*.7z,,*.apk,,*.bz2,,*.deb,,*.gz,,*.gzip,,*.lzma,,*.rpm,,*.tar,,*.tgz,,*.txz,,*.xz,,*.zip::,
   \  ::*.cue,,*.img,,*.iso::,
   \  ::*.bin,,*.so::,
   \  ::*.aac,,*.flac,,*.m3u,,*.m4a,,*.mp3,,*.ogg,,*.opus,,*.pls,,*.wav,,*.wma::,
   \  ::*.avi,,*.m4v,,*.mkv,,*.mov,,*.mp4,,*.mpeg,,*.mpg,,*.webm,,*.wmv::,
   \  ::*.bmp,,*.gif,,*.ico,,*.jpeg,,*.jpg,,*.png,,*.svg::,
-  \  ::*.cbr,,*.cbz,,*.djvu,,*.epub,,*.ps::,
+  \  ::*.cbr,,*.cbz,,*.djvu,,*.epub,,*.ps::,
   \  ::*.pdf::,
-  \  ::*.doc,,*.docx,,*.odt::,
-  \  ::*.ods,,*.xls,,*.xlsx::,
-  \  ::*.odp,,*.ppt,,*.pptx::'
+  \  ::*.doc,,*.docx,,*.gdoc,,*.odt::,
+  \  ::*.gsheet,,*.ods,,*.xls,,*.xlsx::,
+  \  ::*.gslides,,*.odp,,*.ppt,,*.pptx::'
