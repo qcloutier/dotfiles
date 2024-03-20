@@ -20,10 +20,10 @@ set -gx TERMINAL kitty
 set -gx AWS_EC2_METADATA_DISABLED true
 set -gx BAT_OPTS --plain --theme=base16-256
 set -gx DOCKER_BUILDKIT 1
+set -gx DOCKER_HOST unix://$XDG_RUNTIME_DIR/docker.sock
 set -gx FZF_DEFAULT_OPTS --inline-info --layout=reverse
 
 if status is-interactive
-    fish_config prompt choose informative_vcs
     fish_vi_key_bindings
 
     set -g fish_greeting
@@ -31,11 +31,6 @@ if status is-interactive
     set -g fish_cursor_insert line blink
     set -g fish_cursor_replace_one underscore blink
     set -g fish_cursor_visual block blink
-
-    function fish_title
-        set argv (string split ' ' $argv)
-        echo $argv[1]:(prompt_pwd)
-    end
 
     abbr -a av aws-vault
     abbr -a cz chezmoi
