@@ -5,4 +5,5 @@ Library
 .Trash
 .local
 .var
+bin/
 {{- end }}
