@@ -1,0 +1,33 @@
+{{- /*
+When decoded, this string produces a minimal search.json.mozlz4 configuration.
+The Python snippets below can assist in reading and writing mozlz4 files.
+*/ -}}
+{{- b64dec "bW96THo0MABzAAAA8zJ7ImVuZ2luZXMiOlt7ImlkIjoiZGRnQHNlYXJjaC5tb3ppbGxhLm9yZ2RlZmF1bHQifV0sIm1ldGFEYXRhIjp7IhgAEUVGAB9JQAAMUGx0In19" -}}
+{{- /*
+#!/usr/bin/env python3
+import base64, json, lz4.block
+search_json = {
+    'engines': [
+        {
+            'id': 'ddg@search.mozilla.orgdefault'
+        }
+    ],
+    'metaData': {
+        'defaultEngineId': 'ddg@search.mozilla.orgdefault'
+    }
+}
+print(
+    base64.b64encode(
+        b'mozLz40\0' + lz4.block.compress(
+            json.dumps(search_json, separators=(',', ':')).encode()
+        )
+    ).decode('ascii')
+)
+*/ -}}
+{{- /*
+#!/usr/bin/env python3
+import base64, json, lz4.block
+with open('search.json.mozlz4', 'rb') as f:
+    print(f.read(8)) # discard header
+    print(lz4.block.decompress(f.read()).decode('ascii'))
+*/ -}}
