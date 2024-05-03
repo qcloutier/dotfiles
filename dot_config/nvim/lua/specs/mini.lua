@@ -5,25 +5,24 @@ return {
       "nvim-tree/nvim-web-devicons",
     },
     lazy = false,
-    init = function()
-      vim.opt.termguicolors = true
-    end,
     opts = function()
+      local MiniBase16 = require("mini.base16")
       local MiniHipatterns = require("mini.hipatterns")
       local MiniMap = require("mini.map")
+
       return {
         base16 = {
-          use_cterm = true,
+          palette = MiniBase16.mini_palette("#000000", "#FFFFFF"),
           -- stylua: ignore
-          palette = {
-            base00 = "#262626", base08 = "#F66151",
-            base01 = "#303030", base09 = "#E66100",
-            base02 = "#4F4F4F", base0A = "#FFA348",
-            base03 = "#77767B", base0B = "#5BC8AF",
-            base04 = "#B0AFAC", base0C = "#99C1F1",
-            base05 = "#C0BFBC", base0D = "#62A0EA",
-            base06 = "#DEDDDA", base0E = "#DC8ADD",
-            base07 = "#FCFCFC", base0F = "#CDAB8F",
+          use_cterm = {
+            base00 = 0,  base08 = 1,
+            base01 = 18, base09 = 16,
+            base02 = 19, base0A = 3,
+            base03 = 8,  base0B = 2,
+            base04 = 20, base0C = 6,
+            base05 = 7,  base0D = 4,
+            base06 = 21, base0E = 5,
+            base07 = 15, base0F = 17,
           },
         },
         hipatterns = {
@@ -49,6 +48,28 @@ return {
       }
     end,
     config = function(_, opts)
+      if vim.env.TERM == "xterm-kitty" and vim.fn.executable("kitten") == 1 then
+        local s = vim.fn.system({ "kitten", "@", "get-colors" })
+        if vim.v.shell_error == 0 then
+          local m = {}
+          for k, _, v in s:gmatch("(%S+)(%s+)(%S+)") do
+            m[k] = v
+          end
+          -- stylua: ignore
+          opts.base16.palette = {
+            base00 = m.color0,  base08 = m.color1,
+            base01 = m.color18, base09 = m.color16,
+            base02 = m.color19, base0A = m.color3,
+            base03 = m.color8,  base0B = m.color2,
+            base04 = m.color20, base0C = m.color6,
+            base05 = m.color7,  base0D = m.color4,
+            base06 = m.color21, base0E = m.color5,
+            base07 = m.color15, base0F = m.color17,
+          }
+          vim.opt.termguicolors = true
+        end
+      end
+
       require("mini.base16").setup(opts.base16)
       require("mini.bufremove").setup()
       require("mini.comment").setup()
