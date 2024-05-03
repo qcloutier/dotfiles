@@ -20,7 +20,7 @@ set syscalls
 set tablabel='  %t ' tabprefix= tabsuffix=
 set tabscope=pane
 set timefmt=%H:%M│%d/%m/%y
-set trash trashdir=~/.Trash
+set trash trashdir=~/.local/share/Trash/files
 set tuioptions=u
 set undolevels=1000
 set vicmd=nvim
@@ -29,7 +29,7 @@ set vimhelp
 set wildmenu wildstyle=popup
 
 mark h ~
-mark t ~/.Trash
+mark t ~/.local/share/Trash/files
 
 fileviewer {*.7z} 7z l %c
 fileviewer {*.tar.gz,*.tgz} tar -tzf %c
@@ -53,17 +53,14 @@ filetype '{
 set classify='
   \  :dir:/, :reg:, :exe:, :link:, :?:,
   \  ::../::, ::.*/::/, ::.*::,
-  \  ::Applications/::/,
   \  ::Desktop/::/,
   \  ::Documents/::/,
   \  ::Downloads/::/,
-  \  ::Google Drive/::/,
-  \  ::Library/::/,
-  \  ::Movies/,,Videos/::/,
   \  ::Music/::/,
   \  ::Pictures/::/,
   \  ::Public/::/,
   \  ::Templates/::/,
+  \  ::Videos/::/,
   \  ::*.7z,,*.apk,,*.bz2,,*.deb,,*.gz,,*.gzip,,*.lzma,,*.rpm,,*.tar,,*.tgz,,*.txz,,*.xz,,*.zip::,
   \  ::*.cue,,*.img,,*.iso::,
   \  ::*.bin,,*.so::,
