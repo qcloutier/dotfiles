@@ -22,6 +22,5 @@ user_pref("network.cookie.cookieBehavior", 2); // do not accept
 user_pref("places.history.enabled", false);
 user_pref("privacy.clearOnShutdown.cache", true);
 user_pref("privacy.sanitize.sanitizeOnShutdown", true);
-user_pref("rss.show.summary", 0); // web page
 user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
 user_pref("toolkit.telemetry.unified", false);
