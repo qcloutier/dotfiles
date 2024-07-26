@@ -1,8 +1,8 @@
 [Desktop Entry]
 Name=KeePassXC
 GenericName=Password Manager
-Exec=org.keepassxc.KeePassXC
-TryExec=org.keepassxc.KeePassXC
+Exec=/var/lib/flatpak/exports/bin/org.keepassxc.KeePassXC
+TryExec=/var/lib/flatpak/exports/bin/org.keepassxc.KeePassXC
 Icon=keepassxc
 StartupWMClass=keepassxc
 StartupNotify=true
