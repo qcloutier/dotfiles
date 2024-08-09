@@ -6,6 +6,7 @@ set ignorecase
 set incsearch
 set milleroptions=lsize:1,csize:2,rsize:3,rpreview:all
 set millerview
+set mouse=a
 set nofollowlinks
 set nohlsearch
 set norunexec
@@ -14,13 +15,13 @@ set scrolloff=4
 set showtabline=always
 set smartcase
 set sortnumbers
-set statusline='%1* Vifm %* %T %= %2* %A %u:%g %s %1* %d '
+set statusline='%1* Vifm %2* %T %= %3* %A %u:%g %s %1* %d '
 set suggestoptions=normal,visual,view,otherpane,keys,marks,registers
 set syscalls
 set tablabel='  %t ' tabprefix= tabsuffix=
 set tabscope=pane
 set timefmt=%H:%M│%d/%m/%y
-set trash trashdir=~/.local/share/Trash/files
+set trash trashdir=$XDG_DATA_HOME/Trash/files
 set tuioptions=u
 set undolevels=1000
 set vicmd=nvim
@@ -29,7 +30,10 @@ set vimhelp
 set wildmenu wildstyle=popup
 
 mark h ~
-mark t ~/.local/share/Trash/files
+mark t ~/.Trash
+mark d ~/Downloads
+mark b ~/bin
+mark s ~/src
 
 fileviewer {*.7z} 7z l %c
 fileviewer {*.tar.gz,*.tgz} tar -tzf %c
@@ -40,7 +44,7 @@ fileviewer {*.pdf} pdftotext -nopgbrk %c -
 fileviewer {*.gif,*.jpeg,*.jpg,*.png}
   \ kitten icat --place=%pwx%ph@%pxx%py --stdin=no %c >/dev/tty %N
   \ %pc kitten icat --clear >/dev/tty %N
-fileviewer {*} bat --color=always --number %c
+fileviewer {*} bat --color=always --number %c, exiftool %c
 
 filetype '{
     \*.aac,*.flac,*.m4a,*.mp3,*.ogg,*.opus,*.wav,*.wma,

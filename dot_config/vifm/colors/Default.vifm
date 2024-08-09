@@ -1,24 +1,41 @@
 highlight clear
 
-highlight BrokenLink cterm=none ctermfg=Red
-highlight Device cterm=none ctermfg=Red
-highlight Directory cterm=none ctermfg=Blue
-highlight Executable cterm=none ctermfg=Green
-highlight Fifo cterm=none ctermfg=Cyan
-highlight HardLink cterm=none ctermfg=Yellow
-highlight Link cterm=none ctermfg=Yellow
-highlight Socket cterm=none ctermfg=Magenta
+if $TERM != 'xterm-kitty'
+  finish
+endif
 
-highlight Border cterm=none ctermfg=none ctermbg=Blue3
-highlight CurrLine cterm=none ctermfg=default ctermbg=DarkBlue
-highlight LineNr cterm=none ctermfg=LightBlack ctermbg=DarkBlue
-highlight Selected cterm=none ctermfg=default ctermbg=Blue3
-highlight StatusLine cterm=none ctermfg=LightBlack ctermbg=DarkBlue
-highlight SuggestBox cterm=none ctermfg=White ctermbg=DarkBlue
-highlight TabLineSel cterm=bold ctermfg=White ctermbg=Blue3
-highlight TopLine cterm=none ctermfg=White ctermbg=default
-highlight TopLineSel cterm=bold ctermfg=White ctermbg=default
-highlight WildMenu cterm=reverse ctermfg=default ctermbg=default
-
-highlight User1 cterm=bold ctermfg=Black ctermbg=White
-highlight User2 cterm=none ctermfg=White ctermbg=19
+hi  JobLine
+hi  SuggestBox               cterm=none     ctermfg=White       ctermbg=DarkBlue
+hi  StatusLine               cterm=none     ctermfg=White       ctermbg=DarkBlue
+hi    WildMenu               cterm=reverse
+hi    User1                  cterm=bold     ctermfg=Black       ctermbg=White
+hi    User2                  cterm=none     ctermfg=LightBlack  ctermbg=DarkBlue
+hi    User3                  cterm=none     ctermfg=Blue3_2     ctermbg=Blue3
+hi    User20
+hi  Border                   cterm=none     ctermfg=Default     ctermbg=Blue3
+hi  CmdLine
+hi    ErrorMsg
+hi  Win
+hi    OtherWin
+hi      AuxWin
+hi        OddLine
+hi          Directory        cterm=none     ctermfg=Blue
+hi          Link             cterm=none     ctermfg=Yellow
+hi          BrokenLink       cterm=none     ctermfg=Red
+hi          HardLink         cterm=none     ctermfg=Yellow
+hi          Socket           cterm=none     ctermfg=Magenta
+hi          Device           cterm=none     ctermfg=Red
+hi          Fifo             cterm=none     ctermfg=Cyan
+hi          Executable       cterm=none     ctermfg=Green
+hi            CmpMismatch
+hi            CmpUnmatched
+hi            CmpBlank
+hi              Selected     cterm=none     ctermfg=Default     ctermbg=Blue3
+hi                CurrLine   cterm=none     ctermfg=Default     ctermbg=DarkBlue
+hi                  LineNr   cterm=none     ctermfg=LightBlack  ctermbg=DarkBlue
+hi                OtherLine
+hi  TopLine                  cterm=bold     ctermfg=White       ctermbg=Default
+hi    TopLineSel             cterm=bold     ctermfg=White       ctermbg=Default
+hi      TabLineSel           cterm=bold     ctermfg=White       ctermbg=Blue3
+hi  TabLine
+hi    TabLineSel
