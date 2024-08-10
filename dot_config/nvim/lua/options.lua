@@ -5,6 +5,7 @@ g.loaded_python3_provider = 0
 g.loaded_ruby_provider = 0
 
 local opt = vim.opt
+opt.guicursor:append("a:blinkon500-blinkoff500")
 opt.ignorecase = true
 opt.laststatus = 3
 opt.number = true

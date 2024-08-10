@@ -1,4 +1,4 @@
-if vim.fn.has("nvim-0.9") ~= 1 then
+if vim.fn.has("nvim-0.10") ~= 1 then
   vim.notify("Neovim is out-of-date; skipping config load", vim.log.levels.WARN)
   return
 end

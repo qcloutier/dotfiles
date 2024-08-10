@@ -1,16 +1,17 @@
 return {
   {
     "folke/which-key.nvim",
-    config = function()
-      local wk = require("which-key")
-      wk.setup()
-      wk.register({
-        e = { name = "neotree" },
-        f = { name = "telescope" },
-        g = { name = "gitsigns" },
-        m = { name = "minimap" },
-        t = { name = "toggleterm" },
-      }, { prefix = "<Leader>" })
-    end,
+    opts = {
+      delay = function(ctx)
+        return ctx.plugin and 0 or 1000
+      end,
+      spec = {
+        { "<Leader>e", group = "neotree" },
+        { "<Leader>f", group = "telescope" },
+        { "<Leader>g", group = "gitsigns" },
+        { "<Leader>m", group = "minimap" },
+        { "<Leader>t", group = "toggleterm" },
+      },
+    },
   },
 }
