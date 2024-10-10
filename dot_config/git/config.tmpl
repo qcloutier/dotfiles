@@ -12,7 +12,7 @@
 [remote "origin"]
 	prune = true
 
-{{- if ne .org "" }}
+{{ if ne .org "" -}}
 [url "ssh://git@github.com/{{ .org }}"]
 	insteadOf = https://github.com/{{ .org }}
 {{- end }}
