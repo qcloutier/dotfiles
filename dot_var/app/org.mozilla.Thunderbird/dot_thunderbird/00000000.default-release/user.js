@@ -8,7 +8,7 @@ user_pref("extensions.autoDisableScopes", 0); // no restrictions
 user_pref("extensions.htmlaboutaddons.recommendations.enabled", false);
 user_pref("extensions.webextensions.restrictedDomains", "");
 user_pref("general.autoScroll", true);
-user_pref("geo.provider.network.url", "https://location.services.mozilla.com/v1/geolocate?key=%MOZILLA_API_KEY%");
+user_pref("geo.provider.network.url", "");
 user_pref("mail.pane_config.dynamic", 2); // vertical
 user_pref("mail.rights.override", true);
 user_pref("mail.spam.manualMark", true);

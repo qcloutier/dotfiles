@@ -2,14 +2,41 @@
 When decoded, this string produces a minimal search.json.mozlz4 configuration.
 The Python snippets below can assist in reading and writing mozlz4 files.
 */ -}}
-{{- b64dec "bW96THo0MABzAAAA8zJ7ImVuZ2luZXMiOlt7ImlkIjoiZGRnQHNlYXJjaC5tb3ppbGxhLm9yZ2RlZmF1bHQifV0sIm1ldGFEYXRhIjp7IhgAEUVGAB9JQAAMUGx0In19" -}}
+{{- b64dec "bW96THo0MADTAQAA8017ImVuZ2luZXMiOlt7ImlkIjoiZ29vZ2xlQHNlYXJjaC5tb3ppbGxhLm9yZ2RlZmF1bHQiLCJfbWV0YURhdGEiOnsiaGlkZU9uZU9mZkJ1dHRvbiI6dHJ1ZX19LFAAP2RkZ00ANz9iaW5OADhPZWJheZwAAC9jYeQAHZ93aWtpcGVkaWFOAAAPNwEcOF0sIl4BAz4AEUWmAR9JUAEMUGx0In19" -}}
 {{- /*
 #!/usr/bin/env python3
 import base64, json, lz4.block
 search_json = {
     'engines': [
         {
-            'id': 'ddg@search.mozilla.orgdefault'
+            'id': 'google@search.mozilla.orgdefault',
+            '_metaData': {
+                'hideOneOffButton': True
+            }
+        },
+        {
+            'id': 'ddg@search.mozilla.orgdefault',
+            '_metaData': {
+                'hideOneOffButton': True
+            }
+        },
+        {
+            'id': 'bing@search.mozilla.orgdefault',
+            '_metaData': {
+                'hideOneOffButton': True
+            }
+        },
+        {
+            'id': 'ebay@search.mozilla.orgca',
+            '_metaData': {
+                'hideOneOffButton': True
+            }
+        },
+        {
+            'id': 'wikipedia@search.mozilla.orgdefault',
+            '_metaData': {
+                'hideOneOffButton': True
+            }
         }
     ],
     'metaData': {

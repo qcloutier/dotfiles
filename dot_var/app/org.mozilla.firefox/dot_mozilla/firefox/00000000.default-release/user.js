@@ -11,8 +11,9 @@ user_pref("browser.newtabpage.activity-stream.feeds.topsites", false);
 user_pref("browser.newtabpage.activity-stream.improvesearch.topSiteSearchShortcuts", false);
 user_pref("browser.newtabpage.activity-stream.showSponsored", false);
 user_pref("browser.newtabpage.activity-stream.showSponsoredTopSites", false);
+user_pref("browser.newtabpage.activity-stream.showWeather", false);
 user_pref("browser.newtabpage.blocked", '{"26UbzFJ7qT9/4DhodHKA1Q==":1,"4gPpjkxgZzXPVtuEoAL9Ig==":1,"gLv0ja2RYVgxKdp0I5qwvA==":1,"eV8/WsSLxHadrTL1gAxhug==":1,"oYry01JR5qiqP3ru9Hdmtg==":1,"T9nJot5PurhJSy8n038xGA==":1}'); // hide defaults
-user_pref("browser.search.hiddenOneOffs", "Google,Amazon.ca,Bing,DuckDuckGo,eBay,Wikipedia (en)");
+user_pref("browser.search.hiddenOneOffs", "");
 user_pref("browser.shell.checkDefaultBrowser", false);
 user_pref("browser.startup.couldRestoreSession.count", 2); // dismiss
 user_pref("browser.startup.homepage_override.mstone", "ignore");
@@ -43,7 +44,7 @@ user_pref("extensions.pocket.enabled", false);
 user_pref("extensions.webextensions.restrictedDomains", "");
 user_pref("full-screen-api.warning.timeout", 0); // never show
 user_pref("general.autoScroll", true);
-user_pref("geo.provider.network.url", "https://location.services.mozilla.com/v1/geolocate?key=%MOZILLA_API_KEY%");
+user_pref("geo.provider.network.url", "");
 user_pref("media.autoplay.default", 5); // block audio and video
 user_pref("media.hardware-video-decoding.force-enabled", true);
 user_pref("network.IDN_show_punycode", true);
