@@ -1,2 +1,4 @@
 #!/bin/sh
-nohup xdg-open $* > /dev/null 2>&1
+for file in "$@"; do
+  nohup xdg-open "$file" >/dev/null 2>&1
+done
