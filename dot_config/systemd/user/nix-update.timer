@@ -1,0 +1,10 @@
+[Unit]
+Description=Nix Updates and Maintenance
+Documentation=man:nix(1)
+
+[Timer]
+OnCalendar=daily
+Persistent=true
+
+[Install]
+WantedBy=timers.target
