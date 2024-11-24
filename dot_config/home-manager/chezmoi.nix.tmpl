@@ -1,6 +1,8 @@
-{ ... }:
+{ config, pkgs, ... }:
 
 {
+  imports = [ ./profiles/{{ .profile }}.nix ];
+
   home.homeDirectory = "{{ .chezmoi.homeDir }}";
   home.username = "{{ .chezmoi.username }}";
 }
