@@ -1,15 +1,6 @@
-set -a
-XDG_CACHE_HOME=~/.cache
-XDG_CONFIG_HOME=~/.config
-XDG_DATA_HOME=~/.local/share
-XDG_STATE_HOME=~/.local/state
-set +a
-
-if [ -e "${XDG_STATE_HOME}/nix/profile/etc/profile.d/nix.sh" ]; then
-    . "${XDG_STATE_HOME}/nix/profile/etc/profile.d/nix.sh"
-fi
-if [ -e "${XDG_STATE_HOME}/nix/profile/etc/profile.d/hm-session-vars.sh" ]; then
-    . "${XDG_STATE_HOME}/nix/profile/etc/profile.d/hm-session-vars.sh"
+if [ -d ~/.config/environment.d ]; then
+    set -a; . ~/.config/environment.d/*.conf
+    set +a
 fi
 
 if [ -f ~/.bashrc ]; then
