@@ -29,6 +29,7 @@ set -gx BAT_OPTS --plain --theme=(test "$TERM" = xterm-kitty; and echo base16-25
 set -gx DOCKER_HOST unix://$XDG_RUNTIME_DIR/docker.sock
 set -gx FZF_DEFAULT_OPTS --inline-info --layout=reverse
 set -gx JAVA_HOME $XDG_STATE_HOME/nix/profile
+set -gx SSH_ASKPASS
 set -gx TENV_AUTO_INSTALL true
 
 fish_add_path -m /var/lib/flatpak/exports/bin
@@ -63,4 +64,8 @@ if status is-interactive
     alias userctl 'systemctl --user'
     alias yta 'yt-dlp --extract-audio --add-metadata --sponsorblock-remove=sponsor'
     alias ytv 'yt-dlp --format="bestvideo[height<=?1080][fps<=?60][vcodec!=?vp9]+bestaudio/best" --sponsorblock-remove=sponsor'
+end
+
+if test -z "$NIX_PROFILES"
+    source $XDG_STATE_HOME/nix/profile/etc/profile.d/nix.fish
 end
