@@ -2,7 +2,7 @@
 
 {{- $pwd := (joinPath .chezmoi.sourceDir "dot_config/home-manager") }}
 {{- range glob (joinPath $pwd "**/*.nix*") }}
-# .{{ . | trimPrefix $pwd }} : {{ include . | sha256sum -}}
+# .{{ . | trimPrefix $pwd }}: {{ include . | sha256sum }}
 {{- end }}
 
 {{- if lookPath "home-manager" }}

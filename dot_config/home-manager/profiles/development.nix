@@ -34,7 +34,7 @@
     pkgs.snyk
     pkgs.tektoncd-cli
     pkgs.tenv
-    pkgs.terraformls
+    pkgs.terraform-ls
     pkgs.typescript-language-server
     pkgs.valkey
 
