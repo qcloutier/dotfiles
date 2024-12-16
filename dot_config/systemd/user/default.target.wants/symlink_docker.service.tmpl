@@ -1,1 +1,3 @@
+{{ if lookPath "docker" }}
 {{ .chezmoi.homeDir }}/.config/systemd/user/docker.service
+{{ end }}
