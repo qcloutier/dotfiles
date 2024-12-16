@@ -6,6 +6,9 @@ Wants=network-online.target
 
 [Service]
 Type=oneshot
+Restart=on-failure
+RemainAfterExit=true
+ExecStartPre=/usr/bin/ping -c1 dl.flathub.org
 ExecStart=/usr/bin/flatpak update --noninteractive --assumeyes
 ExecStartPost=/usr/bin/flatpak uninstall --unused --noninteractive --assumeyes
 

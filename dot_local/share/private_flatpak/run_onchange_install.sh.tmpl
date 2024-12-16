@@ -1,0 +1,37 @@
+{{ if lookPath "flatpak" -}}
+#!/bin/sh -e
+flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+flatpak install --noninteractive flathub {{ cat
+  "com.github.tchx84.Flatseal"
+  "dog.unix.cantata.Cantata"
+  "io.mpv.Mpv"
+  "org.gimp.GIMP"
+  "org.mozilla.Thunderbird"
+  "org.mozilla.firefox"
+}}{{ if eq (env "XDG_CURRENT_DESKTOP") "pop:GNOME" }} {{ cat
+  "com.github.maoschanz.drawing"
+}}{{ end
+}}{{ if eq (env "XDG_CURRENT_DESKTOP") "KDE" }} {{ cat
+  "org.kde.kalk"
+  "org.kde.kclock"
+  "org.kde.kolourpaint"
+  "org.kde.kwalletmanager5"
+  "org.kde.skanpage"
+}}{{ end
+}}{{ if ne .profile "development" }} {{ cat
+  "com.github.mtkennerly.ludusavi"
+  "com.jgraph.drawio.desktop"
+  "com.usebottles.bottles"
+  "io.freetubeapp.FreeTube"
+  "io.openrct2.OpenRCT2"
+  "org.blender.Blender"
+  "org.keepassxc.KeePassXC"
+  "org.libretro.RetroArch"
+  "org.onlyoffice.desktopeditors"
+  "org.prismlauncher.PrismLauncher"
+}}{{ if not (lookPath "steam") }} {{ cat
+  "com.valvesoftware.Steam"
+}}{{ end
+}}{{ end
+}}
+{{ end -}}
