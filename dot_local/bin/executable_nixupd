@@ -1,0 +1,10 @@
+#!/bin/sh -e
+
+test -n "$NIX_PROFILES" || . ~/.local/state/nix/profile/etc/profile.d/nix.sh
+
+nix-channel --update
+nix-env --install --attr nixpkgs.nix nixpkgs.cacert
+home-manager switch
+
+home-manager expire-generations '-7 days'
+nix-collect-garbage --delete-older-than 7d

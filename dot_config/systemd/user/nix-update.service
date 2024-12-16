@@ -8,11 +8,7 @@ Wants=network-online.target
 Type=oneshot
 Restart=on-failure
 RemainAfterExit=true
-ExecStartPre=%h/.local/state/nix/profile/bin/nix-channel --update
-ExecStartPre=%h/.local/state/nix/profile/bin/nix-env --install --attr nixpkgs.nix nixpkgs.cacert
-ExecStart=%h/.local/state/nix/profile/bin/home-manager switch
-ExecStartPost=%h/.local/state/nix/profile/bin/home-manager expire-generations '-7 days'
-ExecStartPost=%h/.local/state/nix/profile/bin/nix-collect-garbage --delete-older-than 7d
+ExecStart=%h/.local/bin/nixupd
 
 [Install]
 WantedBy=default.target
