@@ -32,6 +32,10 @@ set -gx JAVA_HOME $XDG_STATE_HOME/nix/profile
 set -gx SSH_ASKPASS
 set -gx TENV_AUTO_INSTALL true
 
+if test -z "$NIX_PROFILES"
+    source $XDG_STATE_HOME/nix/profile/etc/profile.d/nix.fish
+end
+
 fish_add_path -m /var/lib/flatpak/exports/bin
 fish_add_path -m $XDG_DATA_HOME/flatpak/exports/bin
 fish_add_path -m $PYTHONUSERBASE/bin
@@ -64,8 +68,4 @@ if status is-interactive
     alias userctl 'systemctl --user'
     alias yta 'yt-dlp --extract-audio --add-metadata --sponsorblock-remove=sponsor'
     alias ytv 'yt-dlp --format="bestvideo[height<=?1080][fps<=?60][vcodec!=?vp9]+bestaudio/best" --sponsorblock-remove=sponsor'
-end
-
-if test -z "$NIX_PROFILES"
-    source $XDG_STATE_HOME/nix/profile/etc/profile.d/nix.fish
 end
