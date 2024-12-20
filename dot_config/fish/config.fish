@@ -62,10 +62,12 @@ if status is-interactive
     abbr -a --position anywhere tg terragrunt
 
     alias aws-vault 'set -e AWS_VAULT; command aws-vault'
+    alias firefox 'org.mozilla.firefox'
     alias icat 'kitten icat --align=left'
-    alias mpv 'io.mpv.Mpv --ytdl-raw-options=format="bestvideo[height<=?1080][fps<=?60][vcodec!=?vp9]+bestaudio/best"'
+    alias logctl 'journalctl --user'
+    alias mpv 'io.mpv.Mpv'
     alias ssh 'kitten ssh'
     alias userctl 'systemctl --user'
-    alias yta 'yt-dlp --extract-audio --add-metadata --sponsorblock-remove=sponsor'
-    alias ytv 'yt-dlp --format="bestvideo[height<=?1080][fps<=?60][vcodec!=?vp9]+bestaudio/best" --sponsorblock-remove=sponsor'
+    alias yta 'yt-dlp --extract-audio'
+    alias ytv 'yt-dlp'
 end
