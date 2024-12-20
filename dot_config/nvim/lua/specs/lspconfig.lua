@@ -22,7 +22,7 @@ return {
           },
         },
         terraformls = {},
-        tsserver = {},
+        ts_ls = {},
       },
       mappings = {
         global = {

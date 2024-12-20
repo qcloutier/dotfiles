@@ -13,7 +13,7 @@ require("lazy").setup("specs", {
     version = "*",
   },
   rocks = {
-    hererocks = false,
+    enabled = false,
   },
   change_detection = {
     notify = false,
