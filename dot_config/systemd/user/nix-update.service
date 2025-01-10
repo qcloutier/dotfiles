@@ -6,7 +6,6 @@ Wants=network-online.target
 
 [Service]
 Type=oneshot
-Restart=on-failure
 RemainAfterExit=true
 ExecStart=%h/.local/bin/nixupd
 
