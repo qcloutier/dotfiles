@@ -68,6 +68,6 @@ if status is-interactive
     alias mpv 'io.mpv.Mpv'
     alias ssh 'kitten ssh'
     alias userctl 'systemctl --user'
-    alias yta 'yt-dlp --extract-audio'
+    alias yta 'yt-dlp --extract-audio --format=bestaudio/best'
     alias ytv 'yt-dlp'
 end
