@@ -16,7 +16,7 @@ match:
 
 paths:
   default: $albumartist/$album%aunique{}/$disc_track $title
-  comp: Various Artists/$album%aunique{}/$artist - $title
+  comp: Various Artists/$album%aunique{}/$disc_track $artist - $title
   singleton: $albumartist/$title
 
 edit:
