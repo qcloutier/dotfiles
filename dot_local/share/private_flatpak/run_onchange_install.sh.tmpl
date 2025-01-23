@@ -31,6 +31,9 @@ flatpak install --noninteractive flathub {{ cat
   "org.prismlauncher.PrismLauncher"
 }}{{ if not (lookPath "steam") }} {{ cat
   "com.valvesoftware.Steam"
+  "com.valvesoftware.Steam.CompatibilityTool.Proton-GE"
+  "org.freedesktop.Platform.VulkanLayer.MangoHud"
+  "org.freedesktop.Platform.VulkanLayer.gamescope"
 }}{{ end
 }}{{ end
 }}
