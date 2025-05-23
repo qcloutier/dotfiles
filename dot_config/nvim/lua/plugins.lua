@@ -1,31 +1,14 @@
-local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
-if not vim.loop.fs_stat(lazypath) then
+local mini_path = vim.fn.stdpath("data") .. "/site/pack/deps/start/mini.nvim"
+
+if not vim.uv.fs_stat(mini_path) then
+  vim.notify("Installing `mini.nvim`...")
   -- stylua: ignore
   vim.fn.system({
     "git", "clone", "--filter=blob:none", "--branch=stable",
-    "https://github.com/folke/lazy.nvim.git", lazypath,
+    "https://github.com/echasnovski/mini.nvim", mini_path,
   })
+  vim.cmd("packadd mini.nvim | helptags ALL")
+  vim.notify("Installed `mini.nvim`")
 end
-vim.opt.rtp:prepend(lazypath)
 
-require("lazy").setup("specs", {
-  defaults = {
-    version = "*",
-  },
-  rocks = {
-    enabled = false,
-  },
-  change_detection = {
-    notify = false,
-  },
-  performance = {
-    rtp = {
-      disabled_plugins = {
-        "matchit",
-        "netrwPlugin",
-        "rplugin",
-        "tohtml",
-      },
-    },
-  },
-})
+require("mini.deps").setup()

@@ -1,0 +1,10 @@
+return {
+  ["copilot.vim"] = "d1e8429bef7f7709586886b0a23a46fbecc685c4",
+  ["guess-indent.nvim"] = "84a4987ff36798c2fc1169cbaff67960aed9776f",
+  ["mini.nvim"] = "94cae4660a8b2d95dbbd56e1fbc6fcfa2716d152",
+  ["neo-tree.nvim"] = "f481de16a0eb59c985abac8985e3f2e2f75b4875",
+  ["nui.nvim"] = "f535005e6ad1016383f24e39559833759453564e",
+  ["nvim-lspconfig"] = "fa2662510d30b06168b6e2e6915518decde6bbac",
+  ["nvim-treesitter"] = "cfc6f2c117aaaa82f19bcce44deec2c194d900ab",
+  ["plenary.nvim"] = "857c5ac632080dba10aae49dba902ce3abf91b35"
+}

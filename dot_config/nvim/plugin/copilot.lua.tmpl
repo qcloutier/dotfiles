@@ -1,0 +1,10 @@
+if not {{ .wantCopilot }} then
+  return
+end
+
+MiniDeps.later(function()
+  MiniDeps.add({
+    source = "github/copilot.vim",
+    checkout = "v1.49.0",
+  })
+end)
