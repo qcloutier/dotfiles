@@ -1,3 +1,6 @@
+[Context]
+filesystems=~/.pki/nssdb
+
 [Environment]
 MOZ_ENABLE_WAYLAND=1
 

@@ -20,8 +20,9 @@ user_pref("browser.startup.homepage_override.mstone", "ignore");
 user_pref("browser.startup.page", 3); // open previous windows and tabs
 user_pref("browser.tabs.closeWindowWithLastTab", false);
 user_pref("browser.tabs.drawInTitlebar", true);
+user_pref("browser.tabs.groups.enabled", true);
 user_pref("browser.toolbars.bookmarks.visibility", "never");
-user_pref("browser.uiCustomization.state", '{"placements":{"TabsToolbar":["alltabs-button","tabbrowser-tabs","new-tab-button"],"nav-bar":["back-button","forward-button","stop-reload-button","customizableui-special-spring1","urlbar-container","customizableui-special-spring2","downloads-button","unified-extensions-button"],"unified-extensions-area":["ublock0_raymondhill_net-browser-action"]},"currentVersion":10000}');
+user_pref("browser.uiCustomization.state", '{"placements":{"TabsToolbar":["alltabs-button","tabbrowser-tabs","new-tab-button"],"nav-bar":["back-button","forward-button","stop-reload-button","customizableui-special-spring1","urlbar-container","customizableui-special-spring2","downloads-button","unified-extensions-button"],"unified-extensions-area":["ublock0_raymondhill_net-browser-action","sponsorblocker_ajay_app-browser-action"]},"currentVersion":10000}');
 user_pref("browser.uidensity", 1); // compact
 user_pref("browser.urlbar.shortcuts.bookmarks", false);
 user_pref("browser.urlbar.shortcuts.history", false);
@@ -49,8 +50,8 @@ user_pref("media.autoplay.default", 5); // block audio and video
 user_pref("media.hardware-video-decoding.force-enabled", true);
 user_pref("network.IDN_show_punycode", true);
 user_pref("network.stricttransportsecurity.preloadlist", false); // allow exceptions
-user_pref("privacy.clearOnShutdown.history", false);
-user_pref("privacy.clearOnShutdown.offlineApps", true);
+user_pref("privacy.clearHistory.cookiesAndStorage", false);
+user_pref("privacy.clearOnShutdown_v2.browsingHistoryAndDownloads", false);
 user_pref("privacy.sanitize.sanitizeOnShutdown", true);
 user_pref("privacy.sanitize.timeSpan", 0); // everything
 user_pref("privacy.userContext.enabled", true); // container tabs

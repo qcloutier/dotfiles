@@ -5,7 +5,7 @@
 import json, lz4.block
 
 data = {
-    'version': 10,
+    'version': 12,
     'engines': [
         {
             'id': 'google',
@@ -39,7 +39,8 @@ data = {
         }
     ],
     'metaData': {
-        'defaultEngineId': 'ddg'
+        'defaultEngineId': 'ddg',
+        'defaultEngineIdHash': '@hash@'
     }
 }
 
