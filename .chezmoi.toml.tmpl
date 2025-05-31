@@ -4,11 +4,10 @@ sourceDir = "{{ .chezmoi.homeDir }}/src/dotfiles"
 command = "fish"
 
 [data]
-email = {{ promptString "email" | quote }}
-name = {{ promptString "name" | quote }}
-org = {{ promptString "org" | quote }}
-profile = {{ promptString "profile" | quote }}
-
-want1Password = {{ promptBool "enable 1Password" }}
-wantCopilot = {{ promptBool "enable Copilot" }}
-wantSyncthing = {{ promptBool "enable Syncthing" }}
+{{- $root := . }}
+{{- range (list "email" "name" "org" "profile") }}
+{{ . }} = {{ promptStringOnce $root . . | quote }}
+{{- end }}
+{{- range (list "1Password" "Copilot" "Syncthing" "Tailscale") }}
+want{{ . }} = {{ promptBoolOnce $root (printf "want%s" .) (printf "enable %s" .) }}
+{{- end }}
