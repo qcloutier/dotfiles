@@ -5,7 +5,7 @@ if not vim.uv.fs_stat(mini_path) then
   -- stylua: ignore
   vim.fn.system({
     "git", "clone", "--filter=blob:none", "--branch=stable",
-    "https://github.com/echasnovski/mini.nvim", mini_path,
+    "https://github.com/nvim-mini/mini.nvim", mini_path,
   })
   vim.cmd("packadd mini.nvim | helptags ALL")
   vim.notify("Installed `mini.nvim`")

@@ -1,7 +1,7 @@
 MiniDeps.later(function()
   MiniDeps.add({
     source = "neovim/nvim-lspconfig",
-    checkout = "v2.1.0",
+    checkout = "v2.4.0",
   })
   vim.lsp.enable({
     "gopls",

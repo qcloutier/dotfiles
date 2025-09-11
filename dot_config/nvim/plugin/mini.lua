@@ -1,7 +1,7 @@
 local add, now, later = MiniDeps.add, MiniDeps.now, MiniDeps.later
 
 add({
-  source = "echasnovski/mini.nvim",
+  source = "nvim-mini/mini.nvim",
   checkout = "v0.16.0",
 })
 
@@ -159,7 +159,14 @@ later(function()
 end)
 
 later(function()
+  local paste = vim.paste
   require("mini.pick").setup()
+  vim.paste = function(...)
+    if MiniPick.is_picker_active() then
+      return vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("<C-r>+", true, true, true), "n", true)
+    end
+    return paste(...)
+  end
 end)
 
 later(function()

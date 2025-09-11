@@ -1,0 +1,3 @@
+#!/bin/sh -e
+# mini-deps-snap: {{ include "dot_config/nvim/mini-deps-snap" | sha256sum }}
+nvim --headless "+lua MiniDeps.snap_load()" "+qa"

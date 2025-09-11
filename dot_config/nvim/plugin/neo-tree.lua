@@ -1,7 +1,7 @@
 MiniDeps.later(function()
   MiniDeps.add({
     source = "nvim-neo-tree/neo-tree.nvim",
-    checkout = "3.33",
+    checkout = "3.35",
     depends = {
       {
         source = "muniftanjim/nui.nvim",
