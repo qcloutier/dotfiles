@@ -8,6 +8,7 @@
     pkgs.bat
     pkgs.beets
     pkgs.cascadia-code
+    pkgs.cava
     pkgs.docker
     pkgs.exiftool
     pkgs.fzf
