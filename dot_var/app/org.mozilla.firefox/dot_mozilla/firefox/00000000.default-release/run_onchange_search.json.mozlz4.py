@@ -5,7 +5,7 @@
 import json, lz4.block
 
 data = {
-    'version': 12,
+    'version': 13,
     'engines': [
         {
             'id': 'google',
