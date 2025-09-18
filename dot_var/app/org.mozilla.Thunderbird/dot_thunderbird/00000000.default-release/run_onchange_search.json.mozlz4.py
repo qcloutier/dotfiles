@@ -5,14 +5,15 @@
 import json, lz4.block
 
 data = {
-    'version': 9,
+    'version': 12,
     'engines': [
         {
-            'id': 'ddg@search.mozilla.orgdefault'
+            'id': 'ddg'
         }
     ],
     'metaData': {
-        'defaultEngineId': 'ddg@search.mozilla.orgdefault'
+        'defaultEngineId': 'ddg',
+        'defaultEngineIdHash': '@hash@'
     }
 }
 
