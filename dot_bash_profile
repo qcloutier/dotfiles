@@ -1,8 +1,14 @@
-if [ -d ~/.config/environment.d ]; then
-    set -a; . ~/.config/environment.d/*.conf
+if [ -f ~/.config/environment.d/00-default.conf ]; then
+    set -a; . ~/.config/environment.d/00-default.conf
     set +a
 fi
 
 if [ -f ~/.bashrc ]; then
     . ~/.bashrc
+fi
+
+if [ -t 0 ] && [ -t 1 ] && [ "$SHLVL" = 1 ]; then
+    if [ -x "${XDG_STATE_HOME}/nix/profile/bin/fish" ]; then
+        "${XDG_STATE_HOME}/nix/profile/bin/fish"
+    fi
 fi
