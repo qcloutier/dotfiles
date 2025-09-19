@@ -2,6 +2,3 @@
 --embed-thumbnail
 --format="bestvideo[height<=?1080][fps<=?60][vcodec!=?vp9]+bestaudio/best"
 --sponsorblock-remove=sponsor
---sub-lang="en.*"
---write-auto-sub
---write-sub
