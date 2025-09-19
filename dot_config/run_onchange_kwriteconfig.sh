@@ -54,9 +54,21 @@ _ Name_2=#2
 _ Number=2
 _ Rows=1
 _
+_ ./kwinrulesrc
+_
+_ [General]
+_ count=1
+_ rules=00000000-0000-0000-0000-000000000000
+_
+_ [00000000-0000-0000-0000-000000000000]
+_ Description=Steam
+_ fsplevel=3
+_ fsplevelrule=2
+_ wmclass=steam
+_ wmclassmatch=1
+_
 _ ./kxkbrc
 _
 _ [Layout]
 _ Options=caps:swapescape
 _ ResetOldOptions=true
-_
