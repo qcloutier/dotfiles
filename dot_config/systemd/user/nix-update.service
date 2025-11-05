@@ -6,6 +6,7 @@ Wants=network-online.target
 
 [Service]
 Type=oneshot
+TimeoutSec=2m
 ExecStart=%h/.local/bin/nixupd
 
 [Install]
