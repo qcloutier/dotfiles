@@ -9,7 +9,7 @@ flatpak install --noninteractive flathub {{ cat
   "org.mozilla.Thunderbird"
   "org.mozilla.firefox"
 }}{{ if eq (env "XDG_CURRENT_DESKTOP") "pop:GNOME" }} {{ cat
-  "com.github.maoschanz.drawing"
+  "com.github.PintaProject.Pinta"
 }}{{ end
 }}{{ if eq (env "XDG_CURRENT_DESKTOP") "KDE" }} {{ cat
   "org.kde.kalk"
@@ -31,9 +31,6 @@ flatpak install --noninteractive flathub {{ cat
   "org.prismlauncher.PrismLauncher"
 }}{{ if not (lookPath "steam") }} {{ cat
   "com.valvesoftware.Steam"
-  "com.valvesoftware.Steam.CompatibilityTool.Proton-GE"
-  "org.freedesktop.Platform.VulkanLayer.MangoHud"
-  "org.freedesktop.Platform.VulkanLayer.gamescope"
 }}{{ end
 }}{{ end
 }}
