@@ -1,7 +1,7 @@
 MiniDeps.later(function()
   MiniDeps.add({
     source = "neovim/nvim-lspconfig",
-    checkout = "v2.4.0",
+    checkout = "v2.6.0",
   })
   vim.lsp.enable({
     "gopls",
@@ -10,7 +10,6 @@ MiniDeps.later(function()
     "pylsp",
     "terraformls",
     "ts_ls",
-    "yamlls",
   })
   vim.diagnostic.config({
     virtual_text = true,

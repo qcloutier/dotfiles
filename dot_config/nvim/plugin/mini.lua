@@ -2,7 +2,7 @@ local add, now, later = MiniDeps.add, MiniDeps.now, MiniDeps.later
 
 add({
   source = "nvim-mini/mini.nvim",
-  checkout = "v0.16.0",
+  checkout = "v0.17.0",
 })
 
 now(function()
