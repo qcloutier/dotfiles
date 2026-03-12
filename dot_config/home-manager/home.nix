@@ -5,7 +5,7 @@
 
   home.stateVersion = "24.05";
 
-  nixGL.packages = import <nixgl> { inherit pkgs; };
+  targets.genericLinux.nixGL.packages = import <nixgl> { inherit pkgs; };
 
   programs.home-manager.enable = true;
 }

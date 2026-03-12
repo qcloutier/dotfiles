@@ -7,11 +7,11 @@
     pkgs._7zz
     pkgs.bat
     pkgs.beets
+    pkgs.borgbackup
     pkgs.cascadia-code
     pkgs.cava
     pkgs.docker
     pkgs.exiftool
-    pkgs.fzf
     pkgs.gcc
     pkgs.glibc
     pkgs.gnumake

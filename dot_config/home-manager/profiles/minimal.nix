@@ -5,10 +5,11 @@
 
   home.packages = [
     pkgs.chezmoi
+    pkgs.fastfetch
     pkgs.fish
+    pkgs.fzf
     pkgs.git
     pkgs.htop
-    pkgs.neofetch
     pkgs.neovim
     pkgs.syncthing
     pkgs.tailscale

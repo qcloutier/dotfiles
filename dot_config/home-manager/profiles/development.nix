@@ -10,7 +10,6 @@
     pkgs.azure-cli
     pkgs.circleci-cli
     pkgs.clickhouse
-    pkgs.codex
     pkgs.commitizen
     pkgs.credstash
     pkgs.delve
@@ -32,6 +31,8 @@
     pkgs.kustomize
     pkgs.maven
     pkgs.nodejs
+    pkgs.opencode
+    pkgs.pgformatter
     pkgs.postgresql
     pkgs.pre-commit
     pkgs.rclone
@@ -42,7 +43,6 @@
     pkgs.terraform-ls
     pkgs.typescript-language-server
     pkgs.valkey
-    pkgs.yaml-language-server
 
     (pkgs.python3.withPackages (python-pkgs: [
       python-pkgs.pip
